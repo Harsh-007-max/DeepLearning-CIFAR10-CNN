@@ -31,6 +31,6 @@ if uploaded_file is not None:
     # Make prediction
     prediction = model.predict(img_array)
     predicted_class = np.argmax(prediction, axis=1)[0]  # Get the class with the highest probability
-    st.write(f"Predicted Label: {labels[predicted_class]}")
+    st.markdown(f"## Predicted Label: {labels[predicted_class]}")
 
 
