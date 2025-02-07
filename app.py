@@ -13,14 +13,15 @@ labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse
 
 # Streamlit frontend
 st.title("CIFAR-10 Image Classifier")
-
+st.markdown("## Classes:")
+st.write("#### **airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck**")
 # Upload image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     # Open the image and display it
     img = Image.open(uploaded_file)
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.image(img, caption="Uploaded Image", use_container_width=True)
     
     # Preprocess the image for the model
     img = img.resize((32, 32))  # CIFAR-10 images are 32x32
