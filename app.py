@@ -9,12 +9,12 @@ import PIL.Image as Image
 model = load_model("model.keras")
 
 # CIFAR-10 class labels
-labels = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+labels = ['aeroplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
 
 # Streamlit frontend
 st.title("CIFAR-10 Image Classifier")
 st.markdown("## Classes:")
-st.write("#### **airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck**")
+st.write("#### **aeroplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck**")
 # Upload image
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 
